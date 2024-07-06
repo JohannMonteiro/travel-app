@@ -1,11 +1,12 @@
 import { FEATURES } from "@/constants"
 import Image from "next/image"
+import React from "react"
 
 
 const Features = () => {
   return (
     <section className="flex-col flexCenter overflow-hidden bg-feature-bg bg-center bg-no-repeat py-24">
-        <div className="max-container padding-container w-full flex justify-end">
+        <div className="max-container padding-container relative w-full flex justify-end">
           {/* Phone */}
             <div className="flex flex-1 lg:min-h-[900px]">
               <Image
@@ -46,10 +47,9 @@ const Features = () => {
 }
 
 type FeatureItem = {
-  title: string,
-  icon: string,
-  
-  description: string
+  title: string;
+  icon: string;
+  description: string;
 }
 
 const FeatureItem = ({title,icon, description}:FeatureItem) => {
@@ -61,7 +61,7 @@ const FeatureItem = ({title,icon, description}:FeatureItem) => {
       <h2 className="bold-20 lg:bold-32 mt-5 capitalize">
           {title}
       </h2>
-      <p className="regular-15 mt-5 bg-white/80 text-gray-30 lg:mt-[30px] lg:bg-none">
+      <p className="regular-16 mt-5 bg-white/80 text-gray-30 lg:mt-[30px] lg:bg-none">
         {description}
         </p>
     </li>
